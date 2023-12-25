@@ -1,0 +1,7 @@
+export { NavBar } from './navbar/navbar'
+export { GenreList } from './genre-list'
+export { Releases } from './releases'
+export { TopMonth } from './top-month'
+export { News } from './new'
+export { NewGames } from './new-games'
+export { Footer } from './footer/footer'
