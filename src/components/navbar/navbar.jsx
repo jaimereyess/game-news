@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import { SiPlaystation, SiXbox, SiNintendo } from "react-icons/si";
@@ -38,16 +38,24 @@ const links = [
 ]
 
 export const NavBar = () => {
+    const location = useLocation();
+
     return (
         <nav className="grid grid-cols-5 gap-5">
-
-            {links.map(link => (
-                <Link key={link.name} to={`/${link.name}`}
-                    className={`link-button link-${link.color} ${link.bg}
-                    rounded-lg flex items-center justify-center py-2
-                    transition duration-300`}>
+            {links.map((link) => (
+                <NavLink
+                    key={link.name}
+                    to={`/${link.name}`}
+                    isActive={() => `/${link.name}` === location.pathname}
+                    className={`link-button link-${link.color} ${`/${link.name}` ===
+                        location.pathname
+                        ? `link-active-${link.color}`
+                        : ""
+                        } ${link.bg} rounded-lg flex items-center justify-center py-2 transition duration-300`}
+                    activeClassName="active"
+                >
                     {link.icon}
-                </Link>
+                </NavLink>
             ))}
         </nav>
     )

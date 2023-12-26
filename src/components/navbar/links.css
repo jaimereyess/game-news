@@ -1,19 +1,24 @@
+.link-active-purple,
 .link-purple:hover {
   box-shadow: 0 0 10px 5px purple;
 }
 
+.link-active-yellow,
 .link-yellow:hover {
   box-shadow: 0 0 10px 5px yellow;
 }
 
+.link-active-blue,
 .link-blue:hover {
   box-shadow: 0 0 10px 5px blue;
 }
 
+.link-active-green,
 .link-green:hover {
   box-shadow: 0 0 10px 5px green;
 }
 
+.link-active-red,
 .link-red:hover {
   box-shadow: 0 0 10px 5px red;
 }
