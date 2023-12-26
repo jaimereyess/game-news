@@ -1,4 +1,5 @@
 import { Home } from './home'
+import { ErrorPage } from './ErrorPage'
 import { createBrowserRouter } from 'react-router-dom'
 import { Sports, Shooters, Adventure, Strategy, Mmo } from './genre/index'
 import { Pc, Playstation, Xbox, Nintendo } from './plataforms/index'
@@ -7,7 +8,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
-        // errorElement: <ErrorPage />
+        errorElement: <ErrorPage />
     },
     {
         path: "/pc",
