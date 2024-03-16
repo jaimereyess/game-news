@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-gray-900;
+}
+
 .text-stroke {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
@@ -29,7 +33,6 @@
   filter: drop-shadow(0 0 25px var(--clr));
 }
 
-
 .link-button {
   position: relative;
   overflow: hidden;
@@ -47,7 +50,7 @@
 }
 
 .link-button::before {
-  content: '';
+  content: "";
   display: block;
   width: 0px;
   height: 86%;
@@ -87,14 +90,9 @@
   transition: box-shadow 0.2s ease-in;
 }
 
-
-
-
 .cover-section img:hover {
   cursor: crosshair;
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
 }
-
-
